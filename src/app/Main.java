@@ -29,4 +29,26 @@ public class Main {
 
         return head;
     }
+
+    private static int[] toArray(ListNode head) {
+        if (head == null) return new int[]{};
+
+        int length = 0;
+        ListNode current = head;
+
+        while (current != null) {
+            length++;
+            current = current.next;
+        }
+
+        int[] result = new int[length];
+        current = head;
+
+        for (int i = 0; i < length; i++) {
+            result[i] = current.val;
+            current = current.next;
+        }
+
+        return result;
+    }
 }
