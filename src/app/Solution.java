@@ -11,5 +11,7 @@ public class Solution {
             prev = current;
             current = nextTemp;
         }
+
+        return prev;
     }
 }
